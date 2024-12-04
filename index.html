@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Spotify Wrapped</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="editor-container">
+        <!-- Background image container -->
+        <div id="wrapped-editor">
+            <img src="wrapped1.png" alt="Spotify Wrapped Background" id="wrapped-image">
+            <div id="text-container">
+                <div class="text-box" id="text-1" contenteditable="true">Song1</div>
+                <div class="text-box" id="text-2" contenteditable="true">Artist1</div>
+                <div class="text-box" id="text-3" contenteditable="true">Song2</div>
+                <div class="text-box" id="text-4" contenteditable="true">Artist2</div>
+                <div class="text-box" id="text-5" contenteditable="true">Song3</div>
+                <div class="text-box" id="text-6" contenteditable="true">Artist3</div>
+                <div class="text-box" id="text-7" contenteditable="true">Song4</div>
+                <div class="text-box" id="text-8" contenteditable="true">Artist4</div>
+                <div class="text-box" id="text-9" contenteditable="true">Song5</div>
+                <div class="text-box" id="text-10" contenteditable="true">Artist5</div>
+            </div>
+            
+            <!-- Original Image Upload Area -->
+            <div class="image-upload-container" id="image-container">
+                <input type="file" id="image-upload-1" accept="image/*" style="display:none;">
+                <div class="image-upload" onclick="document.getElementById('image-upload-1').click();">
+                    <img id="uploaded-image-1" src="" alt="Custom Image" />
+                    <span id="file-label-1">Choose file</span>
+                </div>
+            </div>
+
+            <!-- New Image Upload Areas -->
+            <div class="image-upload-container" id="image-container-2">
+                <input type="file" id="image-upload-2" accept="image/*" style="display:none;">
+                <div class="image-upload" onclick="document.getElementById('image-upload-2').click();">
+                    <img id="uploaded-image-2" src="" alt="Custom Image" />
+                    <span id="file-label-2">Choose file</span>
+                </div>
+            </div>
+            <div class="image-upload-container" id="image-container-3">
+                <input type="file" id="image-upload-3" accept="image/*" style="display:none;">
+                <div class="image-upload" onclick="document.getElementById('image-upload-3').click();">
+                    <img id="uploaded-image-3" src="" alt="Custom Image" />
+                    <span id="file-label-3">Choose file</span>
+                </div>
+            </div>
+            <div class="image-upload-container" id="image-container-4">
+                <input type="file" id="image-upload-4" accept="image/*" style="display:none;">
+                <div class="image-upload" onclick="document.getElementById('image-upload-4').click();">
+                    <img id="uploaded-image-4" src="" alt="Custom Image" />
+                    <span id="file-label-4">Choose file</span>
+                </div>
+            </div>
+            <div class="image-upload-container" id="image-container-5">
+                <input type="file" id="image-upload-5" accept="image/*" style="display:none;">
+                <div class="image-upload" onclick="document.getElementById('image-upload-5').click();">
+                    <img id="uploaded-image-5" src="" alt="Custom Image" />
+                    <span id="file-label-5">Choose file</span>
+                </div>
+            </div>
+        </div>
+        
+        <button id="download-btn">Download Edited Image</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas"></script>
+</body>
+</html>

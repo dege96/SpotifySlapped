@@ -1,0 +1,139 @@
+/* Define the Circular Std Medium 500 font */
+@font-face {
+    font-family: 'Circular Std';
+    font-weight: 500; /* Medium weight */
+    src: url('circular-std-medium-500.ttf') format('truetype');
+}
+
+/* General body styles */
+body {
+    font-family: 'Circular Std', sans-serif;
+    background-color: #FFC700;
+    text-align: center;
+    padding: 20px;
+}
+
+#editor-container {
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Editor styles */
+#wrapped-editor {
+    position: relative;
+    width: 375px;
+    height: 668px;
+        margin: 0 auto;
+}
+
+#wrapped-image {
+    display: block;
+}
+
+/* Editable text box styles */
+.text-box {
+    font-family: 'Circular Std', sans-serif;
+    font-weight: 500; /* Ensuring it's the correct weight */
+    position: absolute;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background for clean design */
+    padding: 2px 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+}
+
+#text-container {
+    font-family: 'Circular Std', sans-serif;
+    font-weight: 500; /* Ensuring it's the correct weight */
+    position: absolute;
+    top: -17px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Adjust positions based on 220px starting point and 61px spacing */
+#text-1 { top: 220px; left: 150px; width: 300px; } /* Song 1 Title */
+#text-2 { top: 241px; left: 150px; width: 300px; } /* Song 1 Artist */
+#text-3 { top: 302px; left: 150px; width: 300px; } /* Song 2 Title */
+#text-4 { top: 323px; left: 150px; width: 300px; } /* Song 2 Artist */
+#text-5 { top: 384px; left: 150px; width: 300px; } /* Song 3 Title */
+#text-6 { top: 405px; left: 150px; width: 300px; } /* Song 3 Artist */
+#text-7 { top: 466px; left: 150px; width: 300px; } /* Song 4 Title */
+#text-8 { top: 487px; left: 150px; width: 300px; } /* Song 4 Artist */
+#text-9 { top: 548px; left: 150px; width: 300px; } /* Song 5 Title */
+#text-10 { top: 569px; left: 150px; width: 300px; } /* Song 5 Artist */
+
+/* Image upload area */
+.image-upload-container {
+    position: absolute;
+    width: 75px;
+    height: 76px;
+    background-color: rgb(255 199 0);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.image-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+#uploaded-image-1, #uploaded-image-2, #uploaded-image-3, #uploaded-image-4, #uploaded-image-5 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+#file-label-1, #file-label-2, #file-label-3, #file-label-4, #file-label-5 {
+    font-size: 12px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Button styles */
+button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Button positioning */
+#download-btn {
+    position: absolute;
+    top: 670px;
+    left: 85px;
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+/* Position the image upload containers below the first one */
+#image-container { top: 185px; left: 59px; }
+#image-container-2 { top: 268px; left: 59px; }
+#image-container-3 { top: 351px; left: 59px; }
+#image-container-4 { top: 434px; left: 59px; }
+#image-container-5 { top: 517px; left: 59px; }
