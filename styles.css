@@ -20,10 +20,12 @@ body {
 
 /* Editor styles */
 #wrapped-editor {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -14%) scale(.7);
     width: 375px;
     height: 668px;
-        margin: 0 auto;
 }
 
 #wrapped-image {
@@ -115,8 +117,9 @@ button {
 /* Button positioning */
 #download-btn {
     position: absolute;
-    top: 670px;
-    left: 85px;
+    top: 478px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #1db954;
     color: white;
     border: none;
