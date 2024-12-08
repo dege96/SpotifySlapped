@@ -1,3 +1,12 @@
+import { Gradient } from './Gradient.js'
+
+// Create your instance
+const gradient = new Gradient()
+
+// Call `initGradient` with the selector to your canvas
+gradient.initGradient('#gradient-canvas')
+        
+
 // Handle image uploads
 function handleImageUpload(imageUploadId, uploadedImageId, fileLabelId) {
   document.getElementById(imageUploadId).addEventListener('change', function (event) {
