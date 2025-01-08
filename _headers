@@ -1,4 +1,4 @@
 /*
-  X-Frame-Options: ALLOW-FROM http://localhost:3001
+  X-Frame-Options: ALLOWALL
   Content-Security-Policy: frame-ancestors 'self' http://localhost:3001
   Access-Control-Allow-Origin: http://localhost:3001
