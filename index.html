@@ -86,7 +86,7 @@
                             className: element.className,
                             id: element.id
                         }
-                    }, 'http://localhost:3001');
+                    }, event.origin.startsWith('http://localhost') ? 'http://localhost:3001' : 'https://kund-feedback.vercel.app');
                 }
             }
         });
