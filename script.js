@@ -41,21 +41,3 @@ document.getElementById('download-btn').addEventListener('click', function () {
       link.click();
   });
 });
-
-window.addEventListener('message', function(event) {
-  if (event.data.type === 'GET_ELEMENT_INFO') {
-      const element = document.elementFromPoint(event.data.x, event.data.y);
-      const elementInfo = {
-          tagName: element.tagName,
-          text: element.textContent.trim(),
-          alt: element.getAttribute('alt'),
-          title: element.getAttribute('title'),
-          className: element.className,
-          id: element.id
-      };
-      window.parent.postMessage({
-          type: 'ELEMENT_INFO_RESPONSE',
-          elementInfo: elementInfo
-      }, '*');
-  }
-});

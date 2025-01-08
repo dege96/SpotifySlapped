@@ -75,5 +75,25 @@
     <canvas id="gradient-canvas" data-transition-in />
     <script type="module" src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/html2canvas"></script>
+    <script>
+        document.addEventListener('message', function(event) {
+            if (event.data.type === 'GET_ELEMENT_INFO') {
+                const element = document.elementFromPoint(event.data.x, event.data.y);
+                if (element) {
+                    window.parent.postMessage({
+                        type: 'ELEMENT_INFO_RESPONSE',
+                        elementInfo: {
+                            tagName: element.tagName,
+                            text: element.textContent.trim(),
+                            alt: element.getAttribute('alt'),
+                            title: element.getAttribute('title'),
+                            className: element.className,
+                            id: element.id
+                        }
+                    }, 'http://localhost:3001');
+                }
+            }
+        });
+        </script>
 </body>
 </html>
